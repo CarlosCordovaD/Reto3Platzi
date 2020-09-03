@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --verydark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --verylight-gray: hsl(0, 0%, 98%);
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--verylight-gray);
+}
+h1 {
+    font-weight: 200;
+    color: var(--verydark-blue);
+    font-size: 24.5px;
+}
+h2 {
+    font-size: 20px;
+    color: var(--verydark-blue);
+    font-weight: 600;
+    margin: 20px 0 5px 0;
+}
+h1 span {
+    font-weight: 600;
+    font-size: 26px;
+}
+p {
+    font-weight: 400;
+    color: var(--grayish-blue);
+    font-size: 15.4px;
+    margin: 0;
+}
+.contenedor {
+    width: 85%;
+    margin: 25vw auto;
+    text-align: center;
+}
+.contenedor__grid {
+    text-align: left;
+    margin-top: 20vw;   
+}
+.contenedor__grid p{
+    font-size: 13.3px;
+}
+.contenedor__subgrid{
+    border-radius: 5px;
+    background-color: white;
+    -webkit-box-shadow: -10px 10px 7px -2px rgba(0,0,0,0.1);
+    -moz-box-shadow: -10px 10px 7px -2px rgba(0,0,0,0.1);
+    box-shadow: -10px 10px 7px -2px rgba(0,0,0,0.1);
+    margin-bottom: 7vw;
+}
+.subgrid1 {
+    border-top: 4px solid var(--cyan);
+}
+.subgrid2 {
+    border-top: 4px solid var(--red);
+}
+.subgrid3 {
+    border-top: 4px solid var(--orange);
+}
+.subgrid4 {
+    border-top: 4px solid var(--blue);
+}
+.contenedor--subgrid {
+    width: 85%;
+    margin: 0 auto;
+}
+.img__grid {
+    text-align: right;
+}
+.contenedor__grid img {
+    width: 20%;
+    margin: 10vw 0 6vw 0;
+}
+
+@media screen and (min-width: 800px){
+    h1 {
+        font-size: 38.5px;
+        width: 50%;
+        margin: 0 auto;
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--verydark-blue);
+        font-weight: 600;
+        margin: 20px 0 5px 0;
+    }
+    h1 span {
+        font-weight: 600;
+        font-size: 40px;
+    }
+    .contenedor {
+        width: 85%;
+        margin: 50px auto;
+        text-align: center;
+    }
+    p{  
+        width: 50%;     
+        font-size: 17px;
+        margin: 0 auto;
+        padding-top: 1.3vw;
+    }
+    .contenedor__grid {
+        display: grid;
+        grid-template-columns: repeat(3,1fr) ;
+        grid-template-areas: "supervisor team calculator"
+                            " supervisor karma calculator ";
+        grid-gap: 3vw;
+        align-items: center;
+        margin-top: 5vw;
+        
+    }
+    .contenedor__grid p{
+        width: 85%;
+        font-size: 13.3px;
+        margin: 0;
+    }
+    .subgrid1{
+        grid-area: supervisor;
+    }
+    .subgrid2{
+        grid-area: team;
+        margin: 0;
+    }
+  
+    .subgrid3{
+        grid-area: karma;
+        grid-column-start: 2;
+    }
+    .subgrid4{
+        grid-area: calculator;        
+    }
+    .contenedor__grid img {
+        width: 20%;
+        margin: 4vw 0 1vw 0;
+    }
+    
+
+}
